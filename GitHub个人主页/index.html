@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>向志航 - 个人主页</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Tailwind 配置 -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f97316', // 暖橙色
+                        secondary: '#f8fafc',
+                        dark: '#1e293b',
+                        'dark-light': '#334155'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-sky-50 dark:bg-dark min-h-screen transition-colors duration-300">
+    <!-- 顶部栏 -->
+    <header class="bg-white dark:bg-dark-light shadow-sm fixed w-full top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <h1 class="text-xl font-bold text-gray-800 dark:text-white">向志航</h1>
+                <span class="text-sm text-gray-500 dark:text-gray-300">|</span>
+                <span class="text-sm text-gray-600 dark:text-gray-400">个人主页</span>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+                <i class="fa fa-sun-o dark:hidden text-gray-600"></i>
+                <i class="fa fa-moon-o hidden dark:block text-gray-300"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="container mx-auto px-4 pt-24 pb-16">
+        <!-- Hero 区 -->
+        <section class="mb-16 text-center">
+            <div class="inline-block px-3 py-1 bg-orange-100 dark:bg-orange-900/30 text-primary rounded-full text-sm font-medium mb-4">
+                Network Engineering Student
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-6">
+                你好，我是向志航
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+                一名计算机类的学生，热爱技术，专注于前后端开发。
+                正在努力学习各种技术栈，希望能够在未来的职业生涯中有所建树。
+            </p>
+            <a href="#" class="inline-block bg-primary hover:bg-orange-600 text-white font-medium py-3 px-6 rounded-lg transition-colors shadow-md hover:shadow-lg">
+                查看项目
+            </a>
+        </section>
+
+        <!-- 信息卡片区 -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">快速信息</h3>
+            <div class="bg-white dark:bg-dark-light rounded-xl shadow-md p-6 max-w-2xl mx-auto transition-colors duration-300">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fa fa-map-marker text-primary mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-medium text-gray-700 dark:text-gray-200">所在地</span>
+                            <p class="text-gray-600 dark:text-gray-300">中国 大连</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-university text-primary mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-medium text-gray-700 dark:text-gray-200">学校</span>
+                            <p class="text-gray-600 dark:text-gray-300">大连海事大学</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-book text-primary mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-medium text-gray-700 dark:text-gray-200">专业</span>
+                            <p class="text-gray-600 dark:text-gray-300">计算机类</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fa fa-compass text-primary mt-1 mr-3"></i>
+                        <div>
+                            <span class="font-medium text-gray-700 dark:text-gray-200">方向</span>
+                            <p class="text-gray-600 dark:text-gray-300">全栈开发</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 关于我区 -->
+        <section class="mb-16">
+            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 text-center">关于我</h3>
+            <div class="bg-white dark:bg-dark-light rounded-xl shadow-md p-6 max-w-2xl mx-auto transition-colors duration-300">
+                <p class="text-gray-600 dark:text-gray-300 mb-4">
+                    我是一名计算机类的学生，对网络安全和前后端开发有着浓厚的兴趣。在校期间，我学习了计算机网络、数据结构、操作系统等基础课程，同时也自学了借助AI来实现并学习前后端开发相关技术。
+                </p>
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    我了解并努力学习 HTML、CSS、JavaScript 等前端技术，能够使用 AI 快速构建响应式网站。同时，我也了解网络安全的基本原理，对网络协议和安全防护有一定的认识。
+                </p>
+                <div>
+                    <h4 class="font-medium text-gray-700 dark:text-gray-200 mb-3">技术栈</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">HTML</span>
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">CSS</span>
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded-full text-sm">网络安全</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部 -->
+    <footer class="bg-white dark:bg-dark-light py-6 border-t border-gray-200 dark:border-gray-700 transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="https://github.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+                    <i class="fa fa-github text-xl"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+                    <i class="fa fa-linkedin text-xl"></i>
+                </a>
+                <a href="mailto:example@example.com" class="text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">
+                    <i class="fa fa-envelope text-xl"></i>
+                </a>
+            </div>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+                &copy; 2024 向志航. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
